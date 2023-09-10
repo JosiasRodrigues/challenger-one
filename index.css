@@ -1,0 +1,151 @@
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background: var(--dark-blue);
+    display: grid;
+    place-items: center;
+    color: var(--soft-blue);
+    font-weight: 300;
+}
+
+.card {
+    min-height: max(35%, 280px);
+    width: max(25%, 330px);
+    max-width: 350px;
+    background: var(--dark-blue);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: -1px 18px 19px 10px var(--very-dark-blue);
+}
+
+.card h2 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px
+}
+
+.card-content {
+    display: grid;
+    row-gap: 20px;
+}
+
+.wrapper-img {
+    border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+
+}
+
+.extra-content, .avatar-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.extra-content span {
+    display: flex;
+    width: 7rem;
+    align-items: center;
+}
+
+.extra-content img {
+    max-width: 18px;
+    margin-right: 5px;
+    object-fit: contain;
+    
+}
+
+.extra-content [alt="icon-etherium"] {
+    height: 17px;
+  
+}
+
+.extra-content p {
+    font-size: 1rem;
+    
+}
+
+.extra-content span:first-child p {
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.avatar-wrapper  {
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    font-size: 16px;
+}
+
+.avatar-wrapper span {
+    color: var(--white);
+}
+
+
+.avatar-wrapper img {
+    max-width: 30px;
+    margin-right: 20px;
+    object-fit: contain;
+    border: solid 1px var(--white);
+    border-radius: 50%;
+}
+
+.wrapper-img {
+    position: relative;
+    cursor: pointer;
+}
+
+.wrapper img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.wrapper-img::after, .wrapper-img::before {
+    width: 100%;
+    height: 100%;
+    opacity: 8.5;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper-img::after {
+    content: '';
+    opacity: 0;
+    background: var(--cyan);
+}
+ 
+
+.wrapper-img::before{
+    content: '';
+    background: url(../public/assets/icons/icon-view.svg) no-repeat;
+    background-position: center;
+    background-size: 10%;
+    z-index: 2;
+    opacity: 0;
+}
+
+
+
+
+.wrapper-img:hover::after {
+   opacity: 0.5;
+}
+
+.wrapper-img:hover:before {
+    opacity: 1;
+ }
+
+@media only screen and (max-width: 375px) {
+    .card{
+        width: 90vw;
+    }
+}
+
+/**/

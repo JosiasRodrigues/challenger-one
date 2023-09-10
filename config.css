@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+ body, main {
+    font-size: 18px;
+    width: 100vw;
+    min-height: 100dvh;
+    min-height: 100vh;
+    font-family: 'Outfit';
+
+
+ }
+
+ :root {
+   --blue: hsla(215, 52%, 70%, 0.459);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue:hsl(217, 54%, 11%);
+    --dark-blue: hsl(216, 50%, 16%);
+    --soft-dark-blue : hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+ }
+ /**/
